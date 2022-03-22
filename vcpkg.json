@@ -1,0 +1,9 @@
+{
+    "name": "base-console-example",
+    "version": "1.0.0",
+    "dependencies": [
+        "boost-filesystem",
+        "boost-date-time"
+    ],
+    "builtin-baseline": "fad0644ade71fc4a77cc85f9c6c265aac721f7ca"
+}
