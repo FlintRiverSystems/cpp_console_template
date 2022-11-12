@@ -29,7 +29,7 @@ project(cpp_console_example)
 add_executable(cpp_console_example)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_SOURCE_DIR}/../..")
 target_include_directories(${PROJECT_NAME} PUBLIC "/data/proj")
