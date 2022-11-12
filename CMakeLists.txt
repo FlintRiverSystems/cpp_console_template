@@ -8,6 +8,10 @@ set(VCPKG_DIR "${FRSTPSRC}/vcpkg")
 message("VCPKG_DIR: ${VCPKG_DIR}")
 
 set(VCPKG_FEATURE_FLAGS "versions")
+if(WIN32)
+        set(VCPKG_TARGET_TRIPLET "x64-windows-static-md") # build static libraries that use DLL runtime
+endif()
+
 set(CMAKE_TOOLCHAIN_FILE ${VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake CACHE STRING "vcpkg toolchain file")
 
 project(cpp_console_example)
