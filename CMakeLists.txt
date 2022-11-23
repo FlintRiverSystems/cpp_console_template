@@ -51,5 +51,5 @@ target_precompile_headers(${PROJECT_NAME} PRIVATE src/pch.h)
 file(GLOB_RECURSE SRC_HDR src/*.h)
 file(GLOB_RECURSE SRC_CPP src/*.cpp)
 
-target_sources(${PROJECT_NAME} PRIVATE ${SRC_CPP})
+target_sources(${PROJECT_NAME} PRIVATE ${SRC_HDR} ${SRC_CPP})
 
