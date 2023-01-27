@@ -25,12 +25,12 @@ endif()
 #set(VCPKG_FEATURE_FLAGS "versions") #enable package versioning in manifest
 set(CMAKE_TOOLCHAIN_FILE ${VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake CACHE STRING "vcpkg toolchain file")
 
-project(cpp_console_example)
+project(cpp_console_template)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(cpp_console_example)
+add_executable(cpp_console_template)
 
 #target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_SOURCE_DIR}/../..")
 target_include_directories(${PROJECT_NAME} PUBLIC "/data/proj")

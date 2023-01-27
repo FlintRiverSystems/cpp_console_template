@@ -1,5 +1,5 @@
 {
-    "name": "base-console-example",
+    "name": "cpp-console-template",
     "version": "1.0.0",
     "dependencies": [
         "boost-filesystem",
