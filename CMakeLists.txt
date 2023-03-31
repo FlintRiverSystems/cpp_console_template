@@ -45,6 +45,8 @@ if (MSVC)
 	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
 	source_group(" " REGULAR_EXPRESSION ".*")
 	source_group("pch" REGULAR_EXPRESSION "cmake_pch\..*")
+
+	target_compile_options(${PROJECT_NAME} PRIVATE /MP)
 endif()
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE src/pch.h)
