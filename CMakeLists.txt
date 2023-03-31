@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 if (NOT DEFINED ENV{FRSTPSRC})
-	message (FATAL_ERROR, "Please define FRSTPSRC")
+	message (FATAL_ERROR "Please define FRSTPSRC")
 endif()
 
 set(FRSTPSRC $ENV{FRSTPSRC})
