@@ -1,9 +1,16 @@
 
 cmake_minimum_required(VERSION 3.12)
 
+if (NOT DEFINED ENV{FRSPROJ})
+	message (FATAL_ERROR "Please define FRSPROJ")
+endif()
+
 if (NOT DEFINED ENV{FRSTPSRC})
 	message (FATAL_ERROR "Please define FRSTPSRC")
 endif()
+
+set(FRSPROJ $ENV{FRSPROJ})
+message("FRSPROJ: ${FRSPROJ}")
 
 set(FRSTPSRC $ENV{FRSTPSRC})
 message("FRSTPSRC: ${FRSTPSRC}")
@@ -33,10 +40,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(${PROJECT_NAME})
 
 #target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_SOURCE_DIR}/../..")
-target_include_directories(${PROJECT_NAME} PUBLIC "/data/proj")
+target_include_directories(${PROJECT_NAME} PUBLIC $ENV{FRSPROJ})
 
-#add_subdirectory(../../FRS_Utility_CPP FRS_Utility_CPP)
-#target_link_libraries(${PROJECT_NAME} PUBLIC FRS_Utility_CPP)
+#add_subdirectory($ENV{FRSPROJ}/frs_utility_cpp frs_utility_cpp)
+#target_link_libraries(${PROJECT_NAME} PUBLIC frs_utility_cpp)
 
 find_package (Boost REQUIRED COMPONENTS filesystem date_time)
 target_link_libraries(${PROJECT_NAME} PRIVATE Boost::boost)
