@@ -42,8 +42,8 @@ add_executable(${PROJECT_NAME})
 #target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_SOURCE_DIR}/../..")
 target_include_directories(${PROJECT_NAME} PUBLIC ${FRSPROJ})
 
-#add_subdirectory(${FRSPROJ}/frs_utility_cpp frs_utility_cpp)
-#target_link_libraries(${PROJECT_NAME} PUBLIC frs_utility_cpp)
+add_subdirectory(${FRSPROJ}/frs_utility_cpp frs_utility_cpp)
+target_link_libraries(${PROJECT_NAME} PUBLIC frs_utility_cpp)
 
 find_package (Boost REQUIRED COMPONENTS filesystem date_time)
 target_link_libraries(${PROJECT_NAME} PRIVATE Boost::boost)

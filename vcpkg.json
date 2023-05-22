@@ -3,6 +3,11 @@
     "version": "1.0.0",
     "dependencies": [
         "boost-filesystem",
-        "boost-date-time"
+        "boost-date-time",
+        "boost-format",
+        "boost-bimap",
+        "boost-dynamic-bitset",
+        "boost-uuid",
+        "nlohmann-json"
     ]
 }
