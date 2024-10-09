@@ -1,5 +1,4 @@
 
-
 using namespace std;
 using namespace FRS::utility;
 
@@ -10,5 +9,4 @@ int main (int argc, char** argv)
 
 	return 0;
 }
-
 
